@@ -19,7 +19,7 @@ public class P10986_나머지합 {
         for(int i = 1; i < N; i++){
             S[i] = S[i-1] + sc.nextInt(); // 합 배열 저장
         }
-        for(int i = 1; i < N; i++){ // 합 배열의모든 값에 % 연산 수행하기
+        for(int i = 0; i < N; i++){ // 합 배열의모든 값에 % 연산 수행하기
             int remainder = (int)(S[i]%M); // 합 배열을 M으로 나눈 값
             // 0 부터 i까지의 구갑 합 자체가 0일때 정답에 더하기
             if(remainder == 0) answer++;
@@ -29,7 +29,7 @@ public class P10986_나머지합 {
         for(int i=0; i<M; i++){
             if(C[i]>1){
                 // 나머지가 같은 인덱스 중 2개를 뽑는 경우의 수 더하기
-                answer += ((C[i] * C[i]-1)/2);
+                answer += (C[i] * (C[i]-1))/2;
             }
         }
         System.out.println(answer);
