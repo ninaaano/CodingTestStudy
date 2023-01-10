@@ -1,4 +1,4 @@
-package Doit알고리즘코딩테스트.자료구조;// @ author ninaaano
+package Doit알고리즘코딩테스트.정렬;// @ author ninaaano
 
 import java.io.BufferedReader;
 import java.io.IOException;
