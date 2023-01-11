@@ -17,6 +17,7 @@ public class P1427_소트인사이드 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String str = br.readLine();
+        // 입력받은 문자의 길이만큼 배열의 길이를 정해준다. 4자리면 4개 생성됨
         int[] arr = new int[str.length()];
         for(int i=0; i<str.length(); i++){
             arr[i] = Integer.parseInt(str.substring(i, i+1));
