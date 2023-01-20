@@ -2,7 +2,6 @@ package Doit알고리즘코딩테스트.탐색;// @ author ninaaano
 
 import java.io.*;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class P13023_ABCDE {
@@ -29,9 +28,9 @@ public class P13023_ABCDE {
         }
         boolean[] visited = new boolean[n]; // 방문 배열 선언
         for(int i=0; i<n; i++){
-            Arrays.fill(visited,false); // 근데 방문배열은 어차피 false로 초기화되어있는 것 아닌가?
+            //Arrays.fill(visited,false); // 근데 방문배열은 어차피 false로 초기화되어있는 것 아닌가? 돌려보니 없어도 된다
             dfs(i,arrList,visited,1); // 1을 넣는 이유는 뭘까?
-            if(isLine) { // dfs 돌고와서 false면 break?
+            if(isLine) { // dfs 돌고와서 isLine이 true로 바뀌면 해당 루프 탈출
                 break;
             }
         }
@@ -51,9 +50,10 @@ public class P13023_ABCDE {
             if(!visited[i]){ // 방문하지 않았다면
                 dfs(i,arrList,visited,cnt+1); // cnt를 증가 시켜서 재귀로 다시 돌아감
             }
-            if(isLine){ // 존재하지 않으면 종료?
-                return;
-            }
+            // 없어도 되는 블록
+//            if(isLine){ // true가 되면 메서드 종료
+//                return;
+//            }
         }
         visited[start] = false; // 일직선이 아닐 경우, 방문 배열 false 처리
     }
