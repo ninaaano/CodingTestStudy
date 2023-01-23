@@ -29,8 +29,11 @@ public class P17298_오큰수 {
             // 반복문 다 돌았는데 스택이 비어 있지 않다면 빌 때까지
             ans[stack.pop()] = -1; // 스택에 남아있는 index에 -1 넣기
         }
+        StringBuilder sb = new StringBuilder();
+
         for(int i=0; i<n; i++){
-            System.out.print(ans[i] + " ");
+            sb.append(ans[i]).append(" ");
         }
+        System.out.println(sb);
     }
 }
