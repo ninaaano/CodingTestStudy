@@ -1,4 +1,4 @@
-package Doit알고리즘코딩테스트.탐색;// @ author ninaaano
+package Doit알고리즘코딩테스트.그리디;// @ author ninaaano
 
 import java.io.BufferedReader;
 import java.io.IOException;
